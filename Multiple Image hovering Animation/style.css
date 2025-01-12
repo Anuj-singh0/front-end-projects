@@ -27,6 +27,9 @@ html, body{
 }
 .elem h1{
     font-size: 6vw;
+    position: relative;
+    z-index: 9;
+    mix-blend-mode: difference;
 
 }
 .elem img{
@@ -36,5 +39,8 @@ html, body{
     object-position: center;
     border-radius: 50%;
     position: absolute;
+    /* transform: translate(-50% ,-50%); */
+    opacity: 0 ;
+    transition: all linear 0.2s ;
 
 }
