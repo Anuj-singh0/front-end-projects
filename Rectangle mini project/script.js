@@ -2,7 +2,7 @@ var rect = document.querySelector("#center");
 
 rect.addEventListener("mousemove", function (details) {
     var rectanglelocation = rect.getBoundingClientRect();
-    var insiderectval = details.clientx - rectanglelocation.left;
+    var insiderectval = details.clientX - rectanglelocation.left; 
 
     if (insiderectval < rectanglelocation.width / 2) {
         var redcolor = gsap.utils.mapRange(
@@ -14,7 +14,7 @@ rect.addEventListener("mousemove", function (details) {
         );
         gsap.to(rect, {
             backgroundColor: `rgb(${redcolor},0,0)`,
-            ease: Power4,
+            ease: Power4.easeOut, 
         });
 
     } else {
@@ -26,14 +26,8 @@ rect.addEventListener("mousemove", function (details) {
             insiderectval
         );
         gsap.to(rect, {
-            backgroundColor: `rgb(0,0,${bluecolor})`, 
-            ease: Power4,
+            backgroundColor: `rgb(0,0,${bluecolor})`,
+            ease: Power4.easeOut, 
         });
-
     }
-});
-rect.addEventListener("mouseleave", function () {
-    gsap.to(rect, {
-        backgroundColor: "White",
-    });
 });
