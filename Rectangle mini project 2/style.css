@@ -7,4 +7,14 @@
 html, body{
     height: 100%;
     width: 100%;
+    background-color: #929292;
+}
+#rect{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: rgb(103, 1, 1);
 }
