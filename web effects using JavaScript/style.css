@@ -21,4 +21,5 @@ html, body{
     height: 200px;
     width: 250px;
     background-color: yellow;
+    overflow: hidden;
 }
